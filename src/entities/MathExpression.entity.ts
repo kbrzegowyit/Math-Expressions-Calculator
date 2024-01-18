@@ -1,5 +1,5 @@
-import { ExpressionConverter } from "./ExpressionConverter.entity";
-import { ExpressionTokenizer, Token, TokenType } from "./ExpressionTokenizer.entity";
+import { ExpressionConverter } from "./ExpressionConverter.entity.js";
+import { Token, ExpressionTokenizer, TokenType } from "./ExpressionTokenizer.entity.js";
 
 type ExpressionNode = {
     data: Token,
