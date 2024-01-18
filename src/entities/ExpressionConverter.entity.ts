@@ -1,4 +1,4 @@
-import { Token, TokenType } from "./ExpressionTokenizer.entity";
+import { Token, TokenType } from "./ExpressionTokenizer.entity.js";
 
 export class ExpressionConverter {
     public covertToPostfix(tokens: Token[]) {

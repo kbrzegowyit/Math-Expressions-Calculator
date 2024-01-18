@@ -1,13 +1,16 @@
-import { ExpressionConverter } from "./entities/ExpressionConverter.entity";
-import { ExpressionTokenizer } from "./entities/ExpressionTokenizer.entity";
-import { MathExpression } from "./entities/MathExpression.entity";
+import { CliService } from "./cli/cli.service.js";
+import { ExpressionConverter } from "./entities/ExpressionConverter.entity.js";
+import { ExpressionTokenizer } from "./entities/ExpressionTokenizer.entity.js";
+import { MathExpression } from "./entities/MathExpression.entity.js";
 
-// print tree
-
-console.log('Expression calculator', '1100 / 30');
-const expression = '11010 / 30';
+//print tree
 const expressionTokenizer = new ExpressionTokenizer();
 const expressionConverter = new ExpressionConverter();
-const mathExpression = new MathExpression(expressionTokenizer, expressionConverter);
-const result = mathExpression.calculate(expression);
-console.log('Result',result);
+const cliService = new CliService(new MathExpression(expressionTokenizer, expressionConverter));
+
+try {
+    await cliService.run();
+} catch (error) {
+    console.log((error as Error).message);
+}
+
