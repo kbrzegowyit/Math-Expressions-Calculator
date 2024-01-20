@@ -22,7 +22,7 @@ export class ExpressionTokenizer {
         }
         expression = expression.replace(/\s+/g, '');
         expression.split('').forEach((char: string) => {
-            if (this.isNumber(char)) {
+            if (this.isNumber(char) || this.isFloat(char)) {
                 buffer.push(char);
             } else if (this.isOperator(char)) {
                 flushBuffer();
@@ -41,6 +41,10 @@ export class ExpressionTokenizer {
 
     private isNumber(char: string): boolean {
         return /\d+/.test(char);
+    }
+
+    private isFloat(char: string): boolean {
+        return /\./.test(char);
     }
     
     private isOperator(char: string): boolean {
