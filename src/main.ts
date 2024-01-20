@@ -3,7 +3,6 @@ import { ExpressionConverter } from "./entities/ExpressionConverter.entity.js";
 import { ExpressionTokenizer } from "./entities/ExpressionTokenizer.entity.js";
 import { MathExpression } from "./entities/MathExpression.entity.js";
 
-//print tree
 const expressionTokenizer = new ExpressionTokenizer();
 const expressionConverter = new ExpressionConverter();
 const cliService = new CliService(new MathExpression(expressionTokenizer, expressionConverter));
