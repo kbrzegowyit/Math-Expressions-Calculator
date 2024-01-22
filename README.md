@@ -4,7 +4,7 @@
 [![SQLite](https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white)](https://www.sqlite.org/)
 [![Mocha](https://img.shields.io/badge/Mocha-8D6748?style=for-the-badge&logo=mocha&logoColor=white)](https://mochajs.org/)
 ![[License]](https://badgen.net/github/license/micromatch/micromatch)
-![GitHub last commit](https://img.shields.io/github/last-commit/kbrzegowyit/Football-Scoresheet-Manager)
+![GitHub last commit](https://img.shields.io/github/last-commit/kbrzegowyit/Math-Expressions-Calculator)
 
 ## About the project
 Math Expression Calculator is an educational project designed for calculating mathematical expressions.
